@@ -1,4 +1,12 @@
 # predictive-system-level-synthesis-master
-### Hi there 👋, here is a brief ReadMe about our experiments for predictive system-level synthesis (SLS).
+### Hi there 👋, here is a brief ReadMe about our experiments for predictive system-level synthesis (SLS). This is still a work in progress.
+## System Requirement
+<!--
+We recommend using Python 3 (and pip3) or above. 
+-->
+* Python 3 or higher
+* Python pip3
+* cvxpy 1.4.2
+
 
 
