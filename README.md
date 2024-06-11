@@ -7,6 +7,7 @@ We recommend using Python 3 (and pip3) or above.
 * Python 3 or higher
 * Python pip3
 * cvxpy 1.4.2
-
+* numpy 1.26.2
+* control 0.9.2
 
 
