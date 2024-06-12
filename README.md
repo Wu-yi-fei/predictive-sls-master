@@ -11,7 +11,7 @@ We recommend using Python 3 (and pip3) or above.
 * control 0.9.2
 
 ## Get Started
-To get started, please run the file ``Predictive Ricatti Control`` and  ``Predictive SLS``.
+To get started, please run the file ``Predictive Ricatti Control.py`` and  ``Predictive SLS.py``.
 
 Among them, the former represents the causal control and predictive control under the Ricatti method. The latter represents the causal control and predictive control under the SLS.
 
