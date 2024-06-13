@@ -18,4 +18,4 @@ The former represents the causal control and predictive control under the Ricatt
 ## Mathematical interpretation of the implementation
 
 ## Current progress
-For testing, we output K and L_hat and the synthesized counterparts in ``controller_models.py`` and ``algorithms`` respectively, unfortunately not exactly as expected.
+For testing, we output K and L_hat and the synthesized counterparts in ``controller_models.py`` and ``algorithms.py`` respectively, unfortunately not exactly as expected.
