@@ -222,8 +222,9 @@ class Predictive_SLS(Algorithm):
                 for t in range(2 * total - 1):
                     controller._Phi_hat_x[t] = self._Phi_hat_x[t].value
                     controller._Phi_hat_u[t] = self._Phi_hat_u[t].value
-                print("K_0=", np.matmul(controller._Phi_u[-1], np.linalg.inv(controller._Phi_x[-1])))
-                print("L_0=", np.matmul(controller._Phi_u[-1], np.linalg.inv(controller._Phi_x[-1])))
+                # synthesized K and L
+                print("K_0=", np.matmul(controller._Phi_u[-1], np.linalg.inv(controller._Phi_x[1])))
+                print("L_0=", controller._Phi_hat_u[1] - np.matmul(np.matmul(controller._Phi_u[1], np.linalg.inv(controller._Phi_x[1])),  controller._Phi_hat_x[1]))
 
             else:
                 controller._Phi_x = [None] * total
