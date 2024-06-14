@@ -222,9 +222,12 @@ class Predictive_SLS(Algorithm):
                 for t in range(2 * total - 1):
                     controller._Phi_hat_x[t] = self._Phi_hat_x[t].value
                     controller._Phi_hat_u[t] = self._Phi_hat_u[t].value
-                # synthesized K and L
-                print("K_0=", np.matmul(controller._Phi_u[-1], np.linalg.inv(controller._Phi_x[1])))
-                print("L_0=", controller._Phi_hat_u[1] - np.matmul(np.matmul(controller._Phi_u[1], np.linalg.inv(controller._Phi_x[1])),  controller._Phi_hat_x[1]))
+                print("K_0=", np.matmul(controller._Phi_u[1], np.linalg.inv(controller._Phi_x[1])))
+                L_0=0
+                for t in range(total - 1):
+                    L_0 += controller._Phi_hat_u[t+1] - np.matmul(
+                    np.matmul(controller._Phi_u[t+1], np.linalg.inv(controller._Phi_x[t+1])), controller._Phi_hat_x[t+1])
+                print("L_0=", -L_0)
 
             else:
                 controller._Phi_x = [None] * total
@@ -232,6 +235,6 @@ class Predictive_SLS(Algorithm):
                 for t in range(total):
                     controller._Phi_x[t] = self._Phi_x[t].value
                     controller._Phi_u[t] = self._Phi_u[t].value
-
-                print("K_0=",np.matmul(controller._Phi_u[-1], np.linalg.inv(controller._Phi_x[-1])))
+                K_0 = 0
+                print("K_0=",-np.matmul(controller._Phi_u[1], np.linalg.inv(controller._Phi_x[1])))
             return controller
