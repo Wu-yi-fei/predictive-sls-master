@@ -69,7 +69,7 @@ class Causal_StateFeedback_Controller(ControllerModel):
         D = self._D
 
         _E = np.matmul(P, np.matmul(self._A, self._x))
-        print('K_0=',-np.matmul(D, self._A))
+        print("K_0=", -np.matmul(D, np.matmul(P, self._A)))
         self._u = -np.matmul(D, _E)
 
     def controlConvergence(self, x, **kwargs):
@@ -140,8 +140,8 @@ class Noncausal_StateFeedback_Controller(ControllerModel):
         for s in range(0, self._horizon):
             _G1 += np.matmul(np.linalg.matrix_power(np.transpose(F), s), P)
         _E = np.matmul(P, np.matmul(self._A, self._x))
-        print('K_0',-np.matmul(D, self._A))
-        print('L_0',-np.matmul(D, _G1))
+        print("K_0=", -np.matmul(D, np.matmul(P, self._A)))
+        print("L_0=",np.matmul(D, _G1))
         self._u = -np.matmul(D, _E) - np.matmul(D, _G)
 
     def controlConvergence(self, x, **kwargs):
