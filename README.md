@@ -21,8 +21,10 @@ The former represents the causal control and predictive control under the Ricatt
   - (A, B1, B2, C1, D12): System matrices, in state-feedback lqc control, we have (A, B1, B2, C1, D12) = (A, I, B, Q, R).
  
 * System
-  - State feed-back system: x = A x + B u + w, y = x
-  - lqc: x* Q x + u* R u
+  - State feed-back system:
+    > x = A x + B u + w, y = x
+  - lqc:
+    > lqc = x* Q x + u* R u
 
 * Controller
   - For **causal Riccati controller**, we set the policy as follows:
