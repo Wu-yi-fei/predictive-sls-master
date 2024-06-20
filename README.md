@@ -34,7 +34,7 @@ The former represents the causal control and predictive control under the Ricatt
      > Implementation Phi_x[t + 1] = A * Phi_x[t] + B2 * Phi_u[t]
 
    - For Predictive SLS, state-feedback constriants is:
-     > [ zI-A, -B2 ][[ Phi_x Phi_hat_x ]; [ Phi_u Phi_hat_u ]] = [ I, 0 ]
+     > In theory [ zI-A, -B2 ][[ Phi_x Phi_hat_x ]; [ Phi_u Phi_hat_u ]] = [ I, 0 ]
      
      > Implementation [ Phi_x[t + 1], Phi_hat_x[t - 1] ] = A * [ Phi_x[t], Phi_hat_x[t] ] + B2 * [ Phi_u[t], Phi_hat_u[t] ]
 ## Current Progress
