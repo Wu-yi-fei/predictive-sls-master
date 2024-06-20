@@ -16,6 +16,10 @@ To get started, please run the file ``Predictive Ricatti Control.py`` and  ``Pre
 The former represents the causal control and predictive control under the Ricatti method. The latter represents the causal control and predictive control under the SLS.
 
 ## Mathematical Interpretation of Implementation
+* Parameters:
+  - horizon: Length of a finite horizon.
+  - (A, B1, B2, C1, D12): System matrices, in state-feedback lqc control, we have (A, B1, B2, C1, D12) = (A, I, B, Q, R).
+
 * Objective Fucntion:
   - For SLS, a convex optimization problem we have implemented is as follows:
     > SLS = min_{Phi_x, Phi_u} || [[ Q^{1/2}, 0 ]; [ 0, R^{1/2} ]] [[ Phi_x ]; [ Phi_u ]] ||^2_Frob
