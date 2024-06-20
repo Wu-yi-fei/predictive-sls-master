@@ -1,29 +1,23 @@
 import csv
-import matplotlib
-import numpy as np
 
-import objective
-from algorithms import *
-from controller_models import *
-from system_models import *
-import control as ctrl
-import matplotlib.pyplot as plt
-from plant_generators import *
-from visualization_tools import *
-from noise_models import *
-from objective import *
+from model.preSLS import objective
+from model.controller_models import *
+from model.plant_generators import *
+from tools.visualization_tools import *
+from model.noise_models import *
+from model.preSLS.objective import *
 
 
 predictive = True
 
 space_dimension = 5
-horizon = 48
+horizon = 24
 FIR_horizon = horizon
 
 
 #  disturbances and predictions
 disturbance = []
-with open('datasets/Windscen_1.csv', mode='r') as file:
+with open('data/PVscen_1.csv', mode='r') as file:
     csvFile = csv.reader(file)
     for lines in csvFile:
         disturbance.append(lines)
@@ -49,7 +43,7 @@ def state_fdbk(sim_horizon):
     # generate noise
     noise = FixedNoiseVector(n_w=sys._n_w, horizon=sim_horizon, FIR_horizon=FIR_horizon)
     noise.generateNoiseFromNoiseModel(cls=ZeroNoise)
-    for i in range(1, sim_horizon // 2+1):
+    for i in range(0, len(disturbance)):
         for j in range(5):
             noise._w[i][sys._n_w // 2 - 2 + j] = 1 * disturbance[i - 1,j]
 
@@ -61,7 +55,7 @@ def state_fdbk(sim_horizon):
     plt.show()
 
     if predictive == True:
-        simulator = Noncausal_Offline_Optimal(
+        simulator = Noncausal_Riccati_Optimal(
             system=sys,
             noise=noise,
             horizon=sim_horizon,
@@ -72,7 +66,7 @@ def state_fdbk(sim_horizon):
             controller=Noncausal_StateFeedback_Controller(sys._A, sys._B2, sys._C1, sys._D12, horizon)
         )
         x_history, u_history, w_history, w_hat1 = simulator.run(sys._A, sys._B2, sys._C1, sys._D12)
-        print(objective.LQC(sys._C1, sys._D12).ObjectiveValue(us=u_history, xs=x_history))
+        print("OptValue = ", objective.LQC(sys._C1, sys._D12).ObjectiveValue(us=u_history, xs=x_history))
 
         Bu_history = matrix_list_multiplication(sys._B2, u_history)
         plot_heat_map(x_history, Bu_history, 'Centralized')
@@ -83,7 +77,7 @@ def state_fdbk(sim_horizon):
                              np.array(d_history)[:48, 3:8])
 
     else:
-        simulator = Causal_Offline_Optimal(
+        simulator = Causal_Riccati(
             system=sys,
             noise=noise,
             horizon=sim_horizon,
