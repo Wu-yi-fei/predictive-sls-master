@@ -19,8 +19,10 @@ The former represents the causal control and predictive control under the Ricatt
 * Objective Fucntion:
   - For SLS, a convex optimization problem we have implemented is as follows:
     > SLS = min_{Phi_x, Phi_u} || [[ Q^{1/2}, 0 ]; [ 0, R^{1/2} ]] [[ Phi_x ]; [ Phi_u ]] ||^2_Frob
+  
   - For predictive SLS, a convex optimization problem we have implemented is as follows:
     > PSLS = min_{Phi_x, Phi_u, Phi_hat_x, Phi_hat_u} || [[Q^{1/2}, 0]; [0, R^{1/2}]] [[Phi_x + Phi_hat_x]; [Phi_u + Phi_hat_u]] ||^2_Frob
+  
 * Contraints:
    - For SLS,  state-feedback constraints is:
      > [ zI-A, -B2 ][[ Phi_x ]; [ Phi_u ]] = I
