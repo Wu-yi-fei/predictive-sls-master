@@ -36,6 +36,9 @@ The former represents the causal control and predictive control under the Ricatt
 
   - For Predictive SLS controller, we set the policy as follows:
      > u[t] = Σ_{t} Phi_u[t] w[t] + Σ_{t} Phi_hat_u[t] w_hat[t]
+
+  - For Babak Nocausal controller, we set the policy as follows:
+     > TODO
     
 * Objective Fucntion:
   - For SLS, a convex optimization problem we have implemented is as follows:
