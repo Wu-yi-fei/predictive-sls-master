@@ -28,4 +28,4 @@ The former represents the causal control and predictive control under the Ricatt
    - For Predictive SLS, state-feedback constriants is:
      > [ zI-A, -B2 ][[ Phi_x Phi_hat_x ]; [ Phi_u Phi_hat_u ]] = [ I, 0 ]
 ## Current Progress
-For testing, we output K and L_hat and the synthesized counterparts in ``controller_models.py`` and ``algorithms.py`` respectively, and we find intuitive consistency between SLS and Riccati's method in our traceback experiments.
+For testing, we output K and L_hat and the synthesized counterparts in ``controller_models.py`` and ``algorithms.py`` respectively, and we find intuitive consistency between SLS and Riccati's method in our tracking experiments.
