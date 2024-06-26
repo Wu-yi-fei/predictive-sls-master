@@ -28,10 +28,10 @@ The former represents the causal control and predictive control under the Ricatt
 
 * Controller
   - For **causal Riccati controller**, we set the policy as follows:
-     > u[t] = K x[t] = (R+B^* PB)^{-1}BPA x[t]
+     > $u[t] = K x[t] = (R+B^* PB)^{-1}BPA x[t]$
      
   - For **predictive Riccati controller**, we set the policy as follows:
-     > u[t] = K x[t] + Σ_{t} L w_hat[t] = (R+B^* PB)^{-1}(BPA x[t] + Σ_{t} (F^*)^t w_hat[t])
+     > $u[t] = K x[t] + \sum_{t} L \hat{w}[t] = (R+B^* PB)^{-1}(BPA x[t] + \sum_{t} (F^*)^t \hat{w}[t])$
 
   - For **SLS controller**, we set the policy as follows:
      > u[t] = Σ_{t} Phi_u[t] w[t]
