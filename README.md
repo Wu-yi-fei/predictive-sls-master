@@ -21,9 +21,9 @@ The former represents the causal control and predictive control under the Ricatt
   - $(A, B_1, B_2, C_1, D_{12})$: System matrices, in state-feedback lqc control, we have $`(A, B_1, B_2, C_1, D_{12}) = (A, I, B, Q, R)`$.
  
 * System
-  - State feed-back system:
+  - State feedback system:
     > $x = A x + B u + w, y = x$
-  - lqc:
+  - LQR problem:
     > $\mathrm{lqc} = x^* Q x + u^* R u$
 
 * Controller
