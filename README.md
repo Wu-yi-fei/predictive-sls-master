@@ -39,7 +39,7 @@ The former represents the causal control and predictive control under the Ricatt
   - For **predictive SLS controller**, we set the policy as follows:
      > $u[t] = \sum_{t} \Phi_u[t] w[t] + \sum_{t} \widehat{\Phi}_u[t] \widehat{w}[t]$
 
-  - For **Babak Nocausal controller**, we set the policy as follows:
+  - For **Babak's non-causal controller**, we set the policy as follows:
      > TODO
     
 * Objective Fucntion:
