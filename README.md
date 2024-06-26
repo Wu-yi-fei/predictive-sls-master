@@ -51,13 +51,13 @@ The former represents the causal control and predictive control under the Ricatt
   
 * Contraints:
    - For **SLS**,  state-feedback constraints is:
-     > In theory [ zI-A, -B2 ][[ Phi_x ]; [ Phi_u ]] = I
+     > In theory [ zI-A, -B_2 ][\Phi_x; \Phi_u] = I
      
-     > Implementation Phi_x[t + 1] = A Phi_x[t] + B2 Phi_u[t]
+     % > Implementation Phi_x[t + 1] = A Phi_x[t] + B2 Phi_u[t]
 
    - For **predictive SLS**, state-feedback constriants is:
-     > In theory [ zI-A, -B2 ][[ Phi_x Phi_hat_x ]; [ Phi_u Phi_hat_u ]] = [ I, 0 ]
+     > In theory [ zI-A, -B_2 ][[ \Phi_x, \widehat{\Phi}_x ]; [ \Phi_u, \widehat{\Phi}_u ]] = [ I, 0 ]
      
-     > Implementation [ Phi_x[t + 1], Phi_hat_x[t - 1] ] = A [ Phi_x[t], Phi_hat_x[t] ] + B2 [ Phi_u[t], Phi_hat_u[t] ]
+     % > Implementation [ Phi_x[t + 1], Phi_hat_x[t - 1] ] = A [ Phi_x[t], Phi_hat_x[t] ] + B2 [ Phi_u[t], Phi_hat_u[t] ]
 ## Current Progress
 For testing, we output K and L_hat and the synthesized counterparts in ``controller_models.py`` and ``algorithms.py`` respectively, and we find intuitive consistency between SLS and Riccati's method in our tracking experiments.
