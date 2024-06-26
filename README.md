@@ -18,7 +18,7 @@ The former represents the causal control and predictive control under the Ricatt
 ## Mathematical Interpretation
 * Parameters
   - horizon: Length of a finite horizon.
-  - (A, B1, B2, C1, D12): System matrices, in state-feedback lqc control, we have (A, B1, B2, C1, D12) = (A, I, B, Q, R).
+  - (A, B1, B2, C1, D12): System matrices, in state-feedback lqc control, we have $`(A, B1, B2, C1, D12) = (A, I, B, Q, R)`$.
  
 * System
   - State feed-back system:
