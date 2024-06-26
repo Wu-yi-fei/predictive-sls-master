@@ -44,7 +44,7 @@ The former represents the causal control and predictive control under the Ricatt
     
 * Objective Fucntion:
   - For **SLS**, a convex optimization problem we have implemented is as follows:
-    > $\mathbf{SLS} = \mathrm{min}_{\Phi_x, \Phi_u} || \left[Q^{1/2}, 0; 0, R^{1/2} \right] [\Phi_x; \Phi_u] ||^2_F$
+    > $\mathbf{SLS} = \mathrm{min}_{\Phi_x, \Phi_u} \| \left[Q^{1/2}, 0; 0, R^{1/2} \right] [\Phi_x; \Phi_u] \|^2_F$
   
   - For **predictive SLS**, a convex optimization problem we have implemented is as follows:
     > PSLS = min_{Phi_x, Phi_u, Phi_hat_x, Phi_hat_u} || [[Q^{1/2}, 0]; [0, R^{1/2}]] [[Phi_x + Phi_hat_x]; [Phi_u + Phi_hat_u]] ||^2_Frob
