@@ -47,7 +47,7 @@ The former represents the causal control and predictive control under the Ricatt
     > $\mathbf{SLS} = \mathrm{min}_{\Phi_x, \Phi_u} || \left[Q^{1/2}, 0; 0, R^{1/2} \right] [\Phi_x; \Phi_u] ||^2_F$
   
   - For **predictive SLS**, a convex optimization problem we have implemented is as follows:
-    > $\mathbf{pSLS} = \mathrm{min}_{Phi_x, Phi_u, \widehat{\Phi}_x, \widehat{\Phi}_u} || \left[Q^{1/2}, 0; 0, R^{1/2} \right] [Phi_x + \widehat{\Phi}_x; Phi_u + \widehat{\Phi}_u] ||^2_F
+    > $\mathbf{pSLS} = \mathrm{min}_{Phi_x, Phi_u, \widehat{\Phi}_x, \widehat{\Phi}_u} || \left[Q^{1/2}, 0; 0, R^{1/2} \right] [Phi_x + \widehat{\Phi}_x; Phi_u + \widehat{\Phi}_u] ||^2_F$
   
 * Contraints:
    - For **SLS**,  state-feedback constraints is:
