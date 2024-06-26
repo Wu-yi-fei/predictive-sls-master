@@ -22,7 +22,7 @@ The former represents the causal control and predictive control under the Ricatt
  
 * System
   - State feed-back system:
-    > x = A x + B u + w, y = x
+    > $x = A x + B u + w$ , y = x
   - lqc:
     > lqc = x* Q x + u* R u
 
