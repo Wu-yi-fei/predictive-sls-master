@@ -31,13 +31,13 @@ The former represents the causal control and predictive control under the Ricatt
      > $u[t] = K x[t] = (R+B^* PB)^{-1}BPA x[t]$
      
   - For **predictive Riccati controller**, we set the policy as follows:
-     > $u[t] = K x[t] + \sum_{t} L \hat{w}[t] = (R+B^* PB)^{-1}(BPA x[t] + \sum_{t} (F^*)^t \hat{w}[t])$
+     > $u[t] = K x[t] + \sum_{t} \widehat{L} \widehat{w}[t] = (R+B^* PB)^{-1}(BPA x[t] + \sum_{t} (F^*)^t \widehat{w}[t])$
 
   - For **SLS controller**, we set the policy as follows:
-     > u[t] = Σ_{t} Phi_u[t] w[t]
+     > $u[t] = \sum_{t} \Phi_u[t] w[t]$
 
   - For **predictive SLS controller**, we set the policy as follows:
-     > u[t] = Σ_{t} Phi_u[t] w[t] + Σ_{t} Phi_hat_u[t] w_hat[t]
+     > $u[t] = \sum_{t} \Phi_u[t] w[t] + \sum_{t} \widehat{\Phi}_u[t] \widehat{w}[t]$
 
   - For **Babak Nocausal controller**, we set the policy as follows:
      > TODO
