@@ -62,4 +62,5 @@ The former represents the causal control and predictive control under the Ricatt
      
 ## Current Progress
 For testing, we output K and L_hat and the synthesized counterparts in ``controller_models.py`` and ``algorithms.py`` respectively, and we find intuitive consistency between SLS and Riccati's method in our tracking experiments.
+
 **6.27**. We improved an optimization setting: changing the number of predictive variables $\widehat{\Phi}$ from $T$ to $T^2$.
