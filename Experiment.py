@@ -7,8 +7,8 @@ from tools.visualization_tools import *
 from model.noise_models import *
 from model.preSLS.objective import *
 
-horizon = 240
-FIR_horizon = 240
+horizon = 40
+FIR_horizon = 40
 
 disturbance = []
 with open('data/Windscen_1.csv', mode='r') as file:
@@ -56,14 +56,14 @@ def state_sls(mode, sim_horizon):
     sim_horizon = sim_horizon
 
     if mode == 'Tracking':
-        A = np.array([[1, 0, 0, 0.1], [0, 1, 0.1, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
-        B = np.array([[1, 0], [0, 1], [0, 0], [0, 0]])
-        Q = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
-        R = np.array([[1.5, 0], [0, 1]])
-        # A = np.array([[1, 0, 0.3, 0], [0, 0.4, 0, 0.1], [0, 0, 0, 0], [0, 0, 0, 0]])
+        # A = np.array([[1, 0, 0, 0.1], [0, 1, 0.1, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
         # B = np.array([[1, 0], [0, 1], [0, 0], [0, 0]])
-        # Q = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
-        # R = np.array([[1, 0], [0, 1]])
+        # Q = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])
+        # R = np.array([[1.5, 0], [0, 1]])
+        A = np.array([[1, 0, 0.3, 0], [0, 0.4, 0, 0.1], [0, 0, 0, 0], [0, 0, 0, 0]])
+        B = np.array([[1, 0], [0, 1], [0, 0], [0, 0]])
+        Q = np.array([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])
+        R = np.array([[1, 0], [0, 1]])
 
     sys = LTI_System(
         n_x=len(A), n_w=len(A), n_u=len(B[0])

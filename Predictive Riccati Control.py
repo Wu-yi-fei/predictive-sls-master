@@ -11,13 +11,13 @@ from model.preSLS.objective import *
 predictive = True
 
 space_dimension = 5
-horizon = 24
-FIR_horizon = horizon
+FIR_horizon = 48
+horizon = 48
 
 
 #  disturbances and predictions
 disturbance = []
-with open('data/PVscen_1.csv', mode='r') as file:
+with open('data/Windscen_9.csv', mode='r') as file:
     csvFile = csv.reader(file)
     for lines in csvFile:
         disturbance.append(lines)
@@ -43,9 +43,9 @@ def state_fdbk(sim_horizon):
     # generate noise
     noise = FixedNoiseVector(n_w=sys._n_w, horizon=sim_horizon, FIR_horizon=FIR_horizon)
     noise.generateNoiseFromNoiseModel(cls=ZeroNoise)
-    for i in range(0, len(disturbance)):
+    for i in range(len(disturbance)):
         for j in range(5):
-            noise._w[i][sys._n_w // 2 - 2 + j] = 1 * disturbance[i - 1,j]
+            noise._w[i][sys._n_w // 2 - 2 + j] = 1 * disturbance[i,j]
 
     plt.plot(np.arange(24), disturbance[:,:5], marker='o', linestyle='-', markersize=2)
     plt.title("disturbance signals")
@@ -94,8 +94,8 @@ def state_fdbk(sim_horizon):
         d_history = np.concatenate(
             (disturbance[:, :sys._n_w], np.zeros(shape=[horizon - disturbance.shape[0], sys._n_w])), axis=0)
 
-        plot_time_trajectory(np.array(x_history)[1:49, 3:8, 0], np.array(Bu_history)[1:49, 3:8, 0],
-                             np.array(d_history)[1:49, 3:8])
+        plot_time_trajectory(np.array(x_history)[:49, 3:8, 0], np.array(Bu_history)[:49, 3:8, 0],
+                             np.array(d_history)[:49, 3:8])
 
 if __name__ == '__main__':
     state_fdbk(horizon)
