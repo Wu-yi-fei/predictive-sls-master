@@ -1,6 +1,6 @@
 # predictive-system-level-synthesis-master
-### Hi there 👋, here is a brief README about our experiments for predictive system-level synthesis (pSLS). This is still a work in progress.
-## System Requirement
+### Hi there 👋, here is a brief README about our experiments for predictive system-level synthesis (PredSLS). This is still a work in progress.
+## Configuration
 <!--
 We recommend using Python 3 (and pip3) or above. 
 -->
