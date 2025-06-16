@@ -10,8 +10,6 @@ Distributed control of large-scale systems is challenging due to the need for sc
 The **PredSLS** framework can be naturally decomposed into spatial and temporal components for efficient and parallelizable computation across the network, yielding a regret upper bound that explicitly depends on the prediction error and communicative distance. Our regret-optimal analysis not only reveals a
 non-monotonic trade-off between control performance and communicative distance when prediction errors are present, but also  guides the identification of an optimal communicative distance, thereby enabling the co-design of controller and its underlying communication topology.
 
-![INTRO_01(1)](https://github.com/user-attachments/assets/0c84565e-1c7c-401d-b552-ffd5596fc35d)
-
 ## Configuration
 <!--
 We recommend using Python 3 (and pip3) or above. 
