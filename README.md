@@ -1,5 +1,8 @@
-# predictive-system-level-synthesis-master
-### Hi there 👋, here is a brief README about our experiments for predictive system-level synthesis (PredSLS). This is still a work in progress.
+# Predictive-System-Level-Synthesis 
+### This is the code repository for Arxiv Paper [Localized Control of Networked Systems via Predictive System-Level Synthesis](https://)
+
+### Authors: Yifei Wu [1], Tongxin Li* [1], Jing Yu [2],
+### [1]:Chinese University of Hong Kong, Shenzhen. [2]: University of Illinois Urbana-Champaign.
 ## Configuration
 <!--
 We recommend using Python 3 (and pip3) or above. 
