@@ -27,3 +27,7 @@ Run and plot the control trajectories of **PredSLS** by:
 ```
 python main.py
 ```
+
+## Questions?
+
+Please email me <yifeiwu1@link.cuhk.edu.cn> or LI Tongxin <litongxin@cuhk.edu.cn> if you have any code or implementation questions.
