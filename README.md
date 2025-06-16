@@ -14,10 +14,10 @@ non-monotonic trade-off between control performance and communicative distance w
 <!--
 We recommend using Python 3 (and pip3) or above. 
 -->
-* Python 3 or higher
-* cvxpy 1.4.2
-* numpy 1.26.2
-* control 0.9.2
+* Python 3+
+* cvxpy 1.4+
+* numpy 1.26+
+* control 0.9+
 
 ## Get Started
 To get started, please run the file ``Predictive Ricatti Control.py`` and  ``Predictive SLS.py``.
