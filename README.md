@@ -11,6 +11,7 @@ The **PredSLS** framework can be naturally decomposed into spatial and temporal 
 non-monotonic trade-off between control performance and communicative distance when prediction errors are present, but also  guides the identification of an optimal communicative distance, thereby enabling the co-design of controller and its underlying communication topology.
 
 ## Configuration
+This code requires the following:
 <!--
 We recommend using Python 3 (and pip3) or above. 
 -->
@@ -20,6 +21,8 @@ We recommend using Python 3 (and pip3) or above.
 * control 0.9+
 
 ## Get Started
-To get started, please run the file ``Predictive Ricatti Control.py`` and  ``Predictive SLS.py``.
+Run and plot the control trajectories of **PredSLS** by:
+```
+python main.py
+```
 
-The former represents the causal control and predictive control under the Ricatti method. The latter represents the causal control and predictive control under the SLS.
