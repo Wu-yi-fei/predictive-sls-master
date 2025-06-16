@@ -14,7 +14,7 @@ non-monotonic trade-off between control performance and communicative distance w
 <!--
 We recommend using Python 3 (and pip3) or above. 
 -->
-* Python 3+
+* python 3+
 * cvxpy 1.4+
 * numpy 1.26+
 * control 0.9+
