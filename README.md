@@ -4,7 +4,7 @@
 
 [1] Chinese University of Hong Kong, Shenzhen
 
-[2] University of Illinois Urbana-Champaign
+[2] University of Washington
 ## Introduction
 Distributed control of large-scale systems is challenging due to the need for scalable and localized communication and computation. In this work, we introduce a **Pred**ictive **S**ystem-**L**evel **S**ynthesis (**PredSLS**) framework that designs closed-loop controllers by jointly integrating communication constraints and perturbation predictions into an affine feedback structure. Rather than focusing on worst-case uncertainty, **PredSLS** leverages both current state feedback and future system disturbance predictions to achieve distributed control of networked systems.
 The **PredSLS** framework can be naturally decomposed into spatial and temporal components for efficient and parallelizable computation across the network, yielding a regret upper bound that explicitly depends on the prediction error and communicative distance. Our regret-optimal analysis not only reveals a
