@@ -11,7 +11,7 @@ The **PredSLS** framework can be naturally decomposed into spatial and temporal 
 non-monotonic trade-off between control performance and communicative distance when prediction errors are present, but also  guides the identification of an optimal communicative distance, thereby enabling the co-design of controller and its underlying communication topology.
 
 <div align=center>
-<img src="./pic/PredSLS_01.png" width="400" ><img src="./pic/result.gif" width="300" >
+<img src="./pic/PredSLS_01.png" width="400" ><img src="./pic/result.gif" width="400" >
 </div>
 
 ## Configuration
