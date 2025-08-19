@@ -1,5 +1,5 @@
 # Predictive-System-Level-Synthesis 
-#### This is the code repository for paper: [Localized Control of Networked Systems via Predictive System-Level Synthesis](https://)
+#### This is the code repository for paper: [System-Level Performance and Communication Tradeoff in Networked Control with Predictions](https://)
 #### Authors: Yifei Wu [1], Jing Yu [2], Tongxin Li [1]
 
 [1] Chinese University of Hong Kong, Shenzhen
