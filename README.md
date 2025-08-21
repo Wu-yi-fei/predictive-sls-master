@@ -32,4 +32,4 @@ python main.py
 
 ## Questions?
 
-Please email me <yifeiwu1@link.cuhk.edu.cn>, Tongxin Li <litongxin@cuhk.edu.cn>, or Jing Yu <jingyua@umich.edu> if you have any code or implementation questions.
+Please email me <yifeiwu1@link.cuhk.edu.cn>, Jing Yu <jingyua@umich.edu>, or Tongxin Li <litongxin@cuhk.edu.cn> if you have any code or implementation questions.
