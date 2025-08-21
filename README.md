@@ -1,5 +1,5 @@
 # Predictive-System-Level-Synthesis 
-#### This is the code repository for paper: [System-Level Performance and Communication Tradeoff in Networked Control with Predictions]([https://](https://www.arxiv.org/abs/2508.13475))
+#### This is the code repository for paper: [System-Level Performance and Communication Tradeoff in Networked Control with Predictions](https://www.arxiv.org/abs/2508.13475)
 #### Authors: Yifei Wu [1], Jing Yu [2], Tongxin Li [1]
 
 [1] Chinese University of Hong Kong, Shenzhen
