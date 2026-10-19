@@ -1,10 +1,6 @@
 # Predictive-System-Level-Synthesis 
 #### This is the code repository for paper: [System-Level Performance and Communication Tradeoff in Networked Control with Predictions](https://www.arxiv.org/abs/2508.13475)
-#### Authors: Yifei Wu [1], Jing Yu [2], Tongxin Li [1]
-
-[1] Chinese University of Hong Kong, Shenzhen
-
-[2] University of Washington
+#### Authors: Yifei Wu [1], [Jing Yu](https://jingyu.io/), [Tongxin Li](https://tongxin.me/)
 ## News
 For review, we have placed two relevant code files ``internal_model_principle_example.py`` and ``zero_prediction_example.py`` in this project. Please refer to them if needed.
 ## Introduction
